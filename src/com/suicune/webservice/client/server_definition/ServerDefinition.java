@@ -1,5 +1,7 @@
 package com.suicune.webservice.client.server_definition;
 
+import java.util.List;
+
 /**
  * Created by lapuente on 09.09.14.
  */
@@ -11,5 +13,8 @@ public interface ServerDefinition {
 
 	public String getUrl();
 	public String getProtocol();
-	public String getPort();
+	public int getPort();
+	public List<String> getResources();
+	public String toString();
+	public List<String> addResource(String resource);
 }

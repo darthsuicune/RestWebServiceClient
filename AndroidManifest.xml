@@ -1,0 +1,6 @@
+<manifest
+    package="com.suicune.webservice.client"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="3"/>
+
+</manifest>
