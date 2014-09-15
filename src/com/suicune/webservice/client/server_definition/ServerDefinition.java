@@ -14,7 +14,7 @@ public interface ServerDefinition {
 	public String getUrl();
 	public String getProtocol();
 	public int getPort();
-	public List<String> getResources();
+	public List<Resource> getResources();
 	public String toString();
-	public List<String> addResource(String resource);
+	public List<Resource> addResource(Resource resource);
 }

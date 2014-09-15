@@ -1,8 +1,8 @@
 package com.suicune.webservice.client.test;
 
 import com.suicune.webservice.client.BasicRestWebServiceClient;
-import com.suicune.webservice.client.RestWebServiceClient;
 import com.suicune.webservice.client.server_definition.BasicServerDefinition;
+import com.suicune.webservice.client.server_definition.Resource;
 import com.suicune.webservice.client.server_definition.ServerDefinition;
 
 import org.json.JSONObject;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertNotNull;
 
 public class BasicRestWebServiceClientTest {
-	RestWebServiceClient client;
+	BasicRestWebServiceClient client;
 	ServerDefinition definition;
 
 	@org.junit.Before
@@ -24,7 +24,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void getIndex() {
-		String resource = null;
+		Resource resource = null;
 		try {
 			assertNotNull(client.getIndex(resource));
 		} catch (IOException e) {
@@ -34,7 +34,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void getNew() {
-		String resource = null;
+		Resource resource = null;
 		try {
 			assertNotNull(client.getNew(resource));
 		} catch (IOException e) {
@@ -43,7 +43,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void postCreate() {
-		String resource = null;
+		Resource resource = null;
 		JSONObject parameters = null;
 		try {
 			assertNotNull(client.postCreate(resource, parameters));
@@ -53,7 +53,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void getShow() {
-		String resource = null;
+		Resource resource = null;
 		long id = 0;
 		try {
 			assertNotNull(client.getShow(resource, id));
@@ -63,7 +63,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void getEdit() {
-		String resource = null;
+		Resource resource = null;
 		long id = 0;
 		try {
 			assertNotNull(client.getEdit(resource, id));
@@ -73,7 +73,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void patchUpdate() {
-		String resource = null;
+		Resource resource = null;
 		JSONObject parameters = null;
 		long id = 0;
 		try {
@@ -84,7 +84,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void putUpdate() {
-		String resource = null;
+		Resource resource = null;
 		JSONObject parameters = null;
 		long id = 0;
 		try {
@@ -95,7 +95,7 @@ public class BasicRestWebServiceClientTest {
 	}
 
 	@Test public void deleteDestroy() {
-		String resource = null;
+		Resource resource = null;
 		long id = 0;
 		try {
 			assertNotNull(client.deleteDestroy(resource, id));

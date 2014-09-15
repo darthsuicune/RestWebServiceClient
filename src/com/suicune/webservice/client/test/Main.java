@@ -28,13 +28,13 @@ public class Main {
 
 		try {
 			String asdf = client.withPostAuth(new AuthTokenPostAuthorization("asdf"))
-					.getIndex("something").asString();
+					.getIndex(null).asString();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		client.withHeaderAuth(new UserPasswordHeaderAuthorization("",""))
-				.getIndexAsync("something", new WebServiceResponseListener() {
+				.getIndexAsync(null, new WebServiceResponseListener() {
 							@Override public void onValidResponse(HttpResponse response) {
 								runner.isCalled = true;
 							}

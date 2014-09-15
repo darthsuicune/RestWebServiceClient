@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 
 import com.suicune.webservice.client.auth.HeaderAuthorization;
 import com.suicune.webservice.client.auth.PostAuthorization;
+import com.suicune.webservice.client.server_definition.Action;
+import com.suicune.webservice.client.server_definition.Resource;
 import com.suicune.webservice.client.server_definition.ServerDefinition;
 
 import org.apache.http.HttpResponse;
@@ -54,75 +56,84 @@ public class BasicRestWebServiceClient implements RestWebServiceClient {
 		return null;
 	}
 
-	@Override public WebServiceResponse getIndex(String resource) throws IOException {
+	@Override public WebServiceResponse run(Resource resource, Action action) throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse getNew(String resource) {
+	@Override public WebServiceResponse runAsync(Resource resource, Action action,
+												 WebServiceResponseListener listener) {
 		return null;
 	}
 
-	@Override public WebServiceResponse postCreate(String resource, JSONObject parameters) {
+	public WebServiceResponse getIndex(Resource resource) throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse getShow(String resource, long id) {
+	public WebServiceResponse getNew(Resource resource) throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse getEdit(String resource, long id) {
+	public WebServiceResponse postCreate(Resource resource, JSONObject parameters)
+			throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse patchUpdate(String resource, JSONObject parameters,
-													long id) {
+	public WebServiceResponse getShow(Resource resource, long id) throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse putUpdate(String resource, JSONObject parameters, long id) {
+	public WebServiceResponse getEdit(Resource resource, long id) throws IOException {
 		return null;
 	}
 
-	@Override public WebServiceResponse deleteDestroy(String resource, long id) {
+	public WebServiceResponse patchUpdate(Resource resource, JSONObject parameters, long id)
+			throws IOException {
+		return null;
+	}
+
+	public WebServiceResponse putUpdate(Resource resource, JSONObject parameters, long id)
+			throws IOException {
+		return null;
+	}
+
+	public WebServiceResponse deleteDestroy(Resource resource, long id) throws IOException {
 		return null;
 	}
 
 
-	@Override public void getIndexAsync(String resource, WebServiceResponseListener listener) {
+	public void getIndexAsync(Resource resource, WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void getNewAsync(String resource, WebServiceResponseListener listener) {
+	public void getNewAsync(Resource resource, WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void postCreateAsync(String resource, JSONObject parameters,
-										  WebServiceResponseListener listener) {
+	public void postCreateAsync(Resource resource, JSONObject parameters,
+								WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void getShowAsync(String resource, long id,
-									   WebServiceResponseListener listener) {
+	public void getShowAsync(Resource resource, long id, WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void getEditAsync(String resource, long id,
-									   WebServiceResponseListener listener) {
+	public void getEditAsync(Resource resource, long id, WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void patchUpdateAsync(String resource, JSONObject parameters, long id,
-										   WebServiceResponseListener listener) {
+	public void patchUpdateAsync(Resource resource, JSONObject parameters, long id,
+								 WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void putUpdateAsync(String resource, JSONObject parameters, long id,
-										 WebServiceResponseListener listener) {
+	public void putUpdateAsync(Resource resource, JSONObject parameters, long id,
+							   WebServiceResponseListener listener) {
 
 	}
 
-	@Override public void deleteDestroyAsync(String resource, long id,
-											 WebServiceResponseListener listener) {
+	public void deleteDestroyAsync(Resource resource, long id,
+								   WebServiceResponseListener listener) {
 
 	}
 

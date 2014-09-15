@@ -10,7 +10,7 @@ public class BasicServerDefinition implements ServerDefinition {
 	String mUrl;
 	String mProtocol;
 	int mPort;
-	List<String> mAvailableResources;
+	List<Resource> mAvailableResources;
 
 	/**
 	 * Basic constructor, uses HTTP and port 80 as default
@@ -24,7 +24,7 @@ public class BasicServerDefinition implements ServerDefinition {
 	}
 
 	public BasicServerDefinition(String url, String protocol, int port,
-								 List<String> availableResources) {
+								 List<Resource> availableResources) {
 		mUrl = url;
 		mProtocol = protocol;
 		mPort = port;
@@ -48,13 +48,13 @@ public class BasicServerDefinition implements ServerDefinition {
 		return mPort;
 	}
 
-	@Override public List<String> getResources() {
+	@Override public List<Resource> getResources() {
 		return mAvailableResources;
 	}
 
 	@Override public String toString() { return mProtocol + "://" + mUrl + ":" + mPort + "/"; }
 
-	@Override public List<String> addResource(String resource) {
+	@Override public List<Resource> addResource(Resource resource) {
 		mAvailableResources.add(resource);
 		return mAvailableResources;
 	}
